@@ -7,6 +7,7 @@ import ClassCount from './ClassCount';
 import FunctionCount from './FunctionCount';
 import ArrayIncre from './ArrayIncre';
 import HooksCount from './HooksCount';
+import HooksCount2 from './HooksCount2';
 
 function App() {
   
@@ -18,7 +19,8 @@ function App() {
       {/* <ClassCount /> */}
       {/* <FunctionCount/> */}
       {/* <ArrayIncre/> */}
-      <HooksCount/>
+      {/* <HooksCount/> */}
+      <HooksCount2/>
     </div>
   );
 }
