@@ -1,30 +1,22 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
-import Rest from './Rest';
-import Restpost from './Restpost';
-import ClassCount from './ClassCount';
-import FunctionCount from './FunctionCount';
-import ArrayIncre from './ArrayIncre';
-import HooksCount from './HooksCount';
-import HooksCount2 from './HooksCount2';
-import HooksCount3 from './HooksCount3';
+import React, { useState, useEffect } from 'react';
 
-function App() {
-  
+function Example() {
+  const [count, setCount] = useState(0);
+
+  // Similar to componentDidMount and componentDidUpdate:
+  useEffect(() => {
+    // Update the document title using the browser API
+    document.write= `You clicked ${count} times`;
+    
+  });
+
   return (
-    <div className="App">
-      
-      {/* <Rest/> */}
-      {/* <Restpost /> */}
-      {/* <ClassCount /> */}
-      {/* <FunctionCount/> */}
-      {/* <ArrayIncre/> */}
-      {/* <HooksCount/> */}
-      {/* <HooksCount2/> */}
-      <HooksCount3/>
+    <div>
+      <p>You clicked {count} times</p>
+      <button onClick={() => setCount(count + 1)}>
+        Click me
+      </button>
     </div>
   );
 }
-
-export default App;
+export default Example
